@@ -8,10 +8,10 @@ public class Ejercicio_7 {
     public static void main(String[] args) {
        
         Set<String> soccerPlayersA = new HashSet<>();
-        soccerPlayersA.add("Messi");
-        soccerPlayersA.add("De paul");
-        soccerPlayersA.add("Martinez");
-        soccerPlayersA.add("Dybala");
+        soccerPlayersA.add("Lionel");
+        soccerPlayersA.add("Rodrigo");
+        soccerPlayersA.add("Julian");
+        soccerPlayersA.add("Paulo");
         
         for(String player: soccerPlayersA) {
             System.out.println(player);
