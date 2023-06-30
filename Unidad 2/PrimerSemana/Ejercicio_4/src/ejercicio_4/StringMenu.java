@@ -10,7 +10,7 @@ public abstract class StringMenu {
         System.out.println("Ingrese la cantidad de palabras que quiere guardar: ");
         Scanner scan = new Scanner(System.in);
         int arrayLength = scan.nextInt();
-
+        
         ArrayList<String> userArray = new ArrayList<>();
 
         for (int i = 0; i < arrayLength; i++) {
