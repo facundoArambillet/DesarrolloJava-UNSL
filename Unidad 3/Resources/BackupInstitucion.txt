@@ -1,0 +1,2 @@
+ID profesor: 1, Federico Arambillet, 29, M, 255000.0, 2, 1, Programador
+ID administrativo: 1, Facundo Arambillet, 24, M, 1, D
