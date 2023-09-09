@@ -3,10 +3,12 @@ package ui;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -38,6 +40,7 @@ public class LoadDataTutor extends javax.swing.JFrame {
     
     public LoadDataTutor() {
         initComponents();
+        loadImage();
         this.tutorEstudianteService = new TutorEstudianteService();
         this.estudianteService = new EstudianteService();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -49,6 +52,12 @@ public class LoadDataTutor extends javax.swing.JFrame {
     public void loadData(List<Object> data) {
         this.dataEstudiante = data;
         createFormTutor();
+    }
+    
+    private void loadImage() {
+        ImageIcon appIcon = new ImageIcon("src/resources/image_app.png");
+        Image appImage = appIcon.getImage();
+        setIconImage(appImage);
     }
     
     public void createFormTutor() {

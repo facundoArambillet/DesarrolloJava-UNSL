@@ -1,7 +1,9 @@
 package ui;
 
 import java.awt.Font;
+import java.awt.Image;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -18,6 +20,7 @@ public class ShowStudents extends javax.swing.JFrame {
     
     public ShowStudents() {
         initComponents();
+        loadImage();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
@@ -28,6 +31,12 @@ public class ShowStudents extends javax.swing.JFrame {
         this.students = students;
         this.rowName = rowName;
         createTable();
+    }
+    
+    private void loadImage() {
+        ImageIcon appIcon = new ImageIcon("src/resources/image_app.png");
+        Image appImage = appIcon.getImage();
+        setIconImage(appImage);
     }
     
     private void createTable() {

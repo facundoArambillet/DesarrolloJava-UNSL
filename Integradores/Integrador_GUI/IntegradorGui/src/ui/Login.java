@@ -1,6 +1,8 @@
 package ui;
 
+import java.awt.Image;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import models.Usuario;
 import models.UsuarioTipo;
@@ -25,6 +27,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        loadImage();
         this.accesoService = new AccesoService();
         this.usuarioService = new UsuarioService();
         this.usuarioTipoService = new UsuarioTipoService();
@@ -42,7 +45,11 @@ public class Login extends javax.swing.JFrame {
            inputUserTypes.addItem(usuario.getTipo());
        }
     }
-
+    private void loadImage() {
+        ImageIcon appIcon = new ImageIcon("src/resources/image_app.png");
+        Image appImage = appIcon.getImage();
+        setIconImage(appImage);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

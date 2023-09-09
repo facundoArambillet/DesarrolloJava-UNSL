@@ -3,8 +3,10 @@ package ui;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -32,6 +34,7 @@ public class UpdateDataTutor extends javax.swing.JFrame {
     
     public UpdateDataTutor() {
         initComponents();
+        loadImage();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
@@ -43,6 +46,12 @@ public class UpdateDataTutor extends javax.swing.JFrame {
         this.estudianteService = new EstudianteService();
         this.tutorEstudiante = tutorEstudiante;
         createFormTutor();
+    }
+    
+    private void loadImage() {
+        ImageIcon appIcon = new ImageIcon("src/resources/image_app.png");
+        Image appImage = appIcon.getImage();
+        setIconImage(appImage);
     }
     
     public void createFormTutor() {

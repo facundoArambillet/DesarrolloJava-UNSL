@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -12,6 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
@@ -51,6 +53,7 @@ public class UpdateData extends javax.swing.JFrame {
     
     public UpdateData() {
         initComponents();
+        loadImage();
         this.profesorTipoService = new ProfesorTipoService();
         this.profesorService = new ProfesorService();
         this.estudianteService = new EstudianteService();
@@ -66,6 +69,12 @@ public class UpdateData extends javax.swing.JFrame {
     public void loadUser(Usuario user) {
        this.usuario = user;
        createForm();
+    }
+    
+    private void loadImage() {
+        ImageIcon appIcon = new ImageIcon("src/resources/image_app.png");
+        Image appImage = appIcon.getImage();
+        setIconImage(appImage);
     }
     
     public void createForm() {

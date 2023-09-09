@@ -2,10 +2,12 @@ package ui;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -38,6 +40,7 @@ public class UpdateSubjectsTeacher extends javax.swing.JFrame {
 
     public UpdateSubjectsTeacher() {
         initComponents();
+        loadImage();
         this.teacherService = new ProfesorService();
         this.subjectService = new MateriaService();
         this.userService = new UsuarioService();
@@ -53,6 +56,12 @@ public class UpdateSubjectsTeacher extends javax.swing.JFrame {
         this.teacher = teacher;
         this.idTeacher = idTeacher;
         createFormSubjects();
+    }
+    
+    private void loadImage() {
+        ImageIcon appIcon = new ImageIcon("src/resources/image_app.png");
+        Image appImage = appIcon.getImage();
+        setIconImage(appImage);
     }
     
     public void createFormSubjects() {

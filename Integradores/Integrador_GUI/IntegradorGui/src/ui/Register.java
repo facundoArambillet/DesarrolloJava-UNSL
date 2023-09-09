@@ -1,6 +1,7 @@
 package ui;
 
 import java.awt.Font;
+import java.awt.Image;
 import java.util.List;
 import models.UsuarioTipo;
 import services.UsuarioTipoService;
@@ -19,6 +20,7 @@ public class Register extends javax.swing.JFrame {
 
     public Register() {
         initComponents();
+        loadImage();
         this.usuarioTipoService = new UsuarioTipoService();
         this.usuarioService = new UsuarioService();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -33,6 +35,12 @@ public class Register extends javax.swing.JFrame {
        for(UsuarioTipo usuario : usuarioTipos) {
            inputUserTypes.addItem(usuario.getTipo());
        }
+    }
+    
+    private void loadImage() {
+        ImageIcon appIcon = new ImageIcon("src/resources/image_app.png");
+        Image appImage = appIcon.getImage();
+        setIconImage(appImage);
     }
     
     /**

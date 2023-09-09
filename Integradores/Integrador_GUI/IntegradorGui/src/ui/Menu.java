@@ -58,6 +58,7 @@ public class Menu extends javax.swing.JFrame {
     
     public Menu() {
         initComponents();
+        loadImage();
         this.teacherService = new ProfesorService();
         this.teacherSubjectService = new ProfesorMateriaService();
         this.courseService = new CursoService();
@@ -72,6 +73,12 @@ public class Menu extends javax.swing.JFrame {
     public void setUsuarioLogueado(Usuario usuario) {
         this.user = usuario;
         loadNavbar();
+    }
+    
+    private void loadImage() {
+        ImageIcon appIcon = new ImageIcon("src/resources/image_app.png");
+        Image appImage = appIcon.getImage();
+        setIconImage(appImage);
     }
     
     public void loadNavbar() {
